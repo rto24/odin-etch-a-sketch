@@ -1,7 +1,13 @@
 const container = document.querySelector(".container");
 
-const input = prompt("Please enter a value for the grid");
-const gridValue = parseInt(input);
+const row = document.createElement('div');
+
+const column = document.createElement('div');
+
+const newGridBtn = document.querySelector(".new-grid-btn");
+
+let input = prompt("Please enter a value for the grid");
+let gridValue = parseInt(input);
 
 function returnInput(gridValue) {
   return returnGrid(gridValue, gridValue);
@@ -16,9 +22,19 @@ function returnGrid(row, column) {
       const column = document.createElement('div');
       column.classList.add('column');
       row.appendChild(column); 
-     
     }
   }
-}
+};
 
 returnInput(gridValue);
+
+newGridBtn.addEventListener('click', () => {
+  container.innerHTML= "";
+  let newInput = prompt("Please enter a value for the grid");
+  let newGridValue = parseInt(newInput);
+  return returnGrid(newGridValue, newGridValue);
+  }
+);
+
+
+
