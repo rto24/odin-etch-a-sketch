@@ -1,0 +1,14 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  background-color: blue;
+  padding: 1rem 0;
+  flex: 1;
+}
