@@ -5,10 +5,13 @@
 
 .row {
   display: flex;
+  gap: 2px;
+  margin-top: 2px;
 }
 
 .column {
-  background-color: blue;
+  background-color: white;
   padding: 1rem 0;
   flex: 1;
+  border: 1px solid black;
 }
