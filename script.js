@@ -1,8 +1,10 @@
 const container = document.querySelector(".container");
 
 const row = document.createElement('div');
+container.appendChild(row);
 
 const column = document.createElement('div');
+row.appendChild(column);
 
 const newGridBtn = document.querySelector(".new-grid-btn");
 
