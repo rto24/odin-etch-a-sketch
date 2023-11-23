@@ -1,34 +1,33 @@
 const container = document.querySelector(".container");
 
-const row = document.createElement('div');
+let row = document.createElement('div');
+row.classList.add('row'); 
 container.appendChild(row);
 
-const column = document.createElement('div');
+let column = document.createElement('div');
+column.classList.add('column'); 
 row.appendChild(column);
 
 const newGridBtn = document.querySelector(".new-grid-btn");
 
-let input = prompt("Please enter a value for the grid");
-let gridValue = parseInt(input);
-
-function returnInput(gridValue) {
-  return returnGrid(gridValue, gridValue);
-}
-
 function returnGrid(row, column) {
   for (let i = 0; i < row; i++) {
-    const row = document.createElement('div');
+    let row = document.createElement('div');
     row.classList.add('row');
     container.appendChild(row);
-    for (let j = 0; j < column; j++) {
-      const column = document.createElement('div');
-      column.classList.add('column');
-      row.appendChild(column); 
+
+  for (let j = 0; j < column; j++) {
+    let column = document.createElement('div');
+    column.classList.add('column');
+    row.appendChild(column); 
+          
+    column.addEventListener('mouseover', () => {
+      column.style.backgroundColor = 'black';
+            
+      })
     }
   }
 };
-
-returnInput(gridValue);
 
 newGridBtn.addEventListener('click', () => {
   container.innerHTML= "";
@@ -38,5 +37,8 @@ newGridBtn.addEventListener('click', () => {
   }
 );
 
+column.addEventListener('mouseover', () => {
+   column.style.backgroundColor = 'black';
+ });
 
 
